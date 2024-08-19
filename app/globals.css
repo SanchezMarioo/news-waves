@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+:root {
+    --background: 240 5% 6%;
+    --foreground: 60 5% 90%;
+    --primary: 240 0% 90%;
+    --primary-foreground: 60 0% 0%;
+    --secondary: 240 4% 15%;
+    --secondary-foreground: 60 5% 85%;
+    --accent: 240 0% 13%;
+    --accent-foreground: 60 0% 100%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 240 5% 25%;
+    --muted-foreground: 60 5% 85%;
+    --card: 240 4% 10%;
+    --card-foreground: 60 5% 90%;
+    --popover: 240 5% 15%;
+    --popover-foreground: 60 5% 85%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 240 5% 90%;
+    --radius: 0.5rem;
+  }
+
+  .portada {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.asmedia.epimg.net/resizer/v2/CMHGWCSW5WCHWPQ6XJA5EQLTQ4.jpg?auth=8539a330d292b557a79f50b8dce95fe6346db2dd205d6369b53545bc9115347f&width=1472&height=828&smart=true');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.font-manrope-portada{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+}
+.font-manrope-bold-portada{
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 3rem; 
+}
+.news{
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+}	
+.font-manrope{
+    font-family: 'Manrope', sans-serif;
+}
+.font-manrope-bold{
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold; 
+}
+img{
+    object-fit: cover;
+}
+body{
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Manrope', sans-serif;
+}
