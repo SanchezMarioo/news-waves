@@ -43,10 +43,6 @@
     font-weight: bold;
     font-size: 3rem; 
 }
-.news{
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-}	
 .font-manrope{
     font-family: 'Manrope', sans-serif;
 }
@@ -60,5 +56,43 @@ img{
 body{
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: 'Manrope', sans-serif;
+}
+.navbar{
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+}
+.navbar a{
+    color: hsl(var(--primary-foreground));
+}
+.lastest-news{
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+.news{
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+.card{
+    background-color: hsl(var(--card)) !important;
+    color: hsl(var(--card-foreground)) !important;
+    border: 2px solid hsl(var(--border)) !important;
+    border-radius: var(--radius) !important;
+    padding: 1rem;
+    box-shadow: 0 0 1rem 0 hsla(var(--border), 0.5) !important;
+}
+.contPrincipal{
+    margin-top: 80px;
+}
+nav a{
+    color: hsl(var(--primary-foreground));
+    transition: all 0.5s;
+}
+nav a:hover{
+    color: hsl(var(--foreground));
+    border-bottom: 2px solid hsl(var(--primary-foreground));
 }

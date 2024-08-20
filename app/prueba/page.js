@@ -1,35 +1,80 @@
-export default function RootLayout({ children }) {
-    return (
-    <div className="container news">
-        <h2> Noticias</h2>
-        <section className="deportes">
-            <h2>Deportes</h2>
-            <div className="row row-cols-1 row-cols-md-3 g-4">
-                <div className="row">
-                    <div className="d-flex flex-column">
-                        <div className="d-flex p-2">
-                        <div className="image">
-                            <img src="https://www.eltiempo.com/files/image_640_428/uploads/2021/05/26/60ae7f3f9d2a0.jpeg" alt="noticia" width={200} height={250}/>
-                        </div>
-                        <div className="content p-2">
-                            <h5>Titulo de la noticia</h5>
-                            <p>Resumen de la noticia</p>
-                            <a href="#" className="btn btn-light m-2" role="button" data-bs-toggle="button">Leer Mas</a>
-                        </div>
-                        </div>
-                        <div className="image">
-                            <img src="https://www.eltiempo.com/files/image_640_428/uploads/2021/05/26/60ae7f3f9d2a0.jpeg" alt="noticia" width={200} height={250}/>
-                        </div>
-                        <div className="content p-2">
-                            <h5>Titulo de la noticia</h5>
-                            <p>Resumen de la noticia</p>
-                            <a href="#" className="btn btn-light m-2" role="button" data-bs-toggle="button">Leer Mas</a>
-                        </div>
-                    </div>
-                    
-                </div>
+// app/prueba/page.js
+
+import fetch from 'node-fetch';
+
+// Función para construir la URL con parámetros
+function buildApiUrl(query, limit, timePublished, country, lang) {
+  const baseUrl = 'https://real-time-news-data.p.rapidapi.com/search';
+  const url = new URL(baseUrl);
+  url.searchParams.append('query', query);
+  url.searchParams.append('limit', limit);
+  url.searchParams.append('time_published', timePublished);
+  url.searchParams.append('country', country);
+  url.searchParams.append('lang', lang);
+  return url.toString();
+}
+
+// Configuración de opciones de caché y revalidación
+const fetchOptions = {
+  cache: 'default',
+  next: {
+    revalidate: 82400 // Tiempo en segundos para revalidar los datos
+  }
+};
+
+// Función para obtener datos con parámetros
+async function fetchData(query, limit, timePublished, country, lang) {
+  const API_URL = buildApiUrl(query, limit, timePublished, country, lang);
+  const API_OPTIONS = {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': '05c619e7f5mshd2f0c8a06544e03p1b28cdjsnfa74da2cfcaf',
+      'x-rapidapi-host': 'real-time-news-data.p.rapidapi.com'
+    }
+  };
+
+  try {
+    const response = await fetch(API_URL, { ...API_OPTIONS, ...fetchOptions });
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Fetch error:', error);
+    return { error: error.message };
+  }
+}
+
+// Componente de servidor
+export default async function PruebaPage(query, limit, timePublished, country, lang) {
+   query = 'politica';
+   limit = '3';
+    timePublished = 'anytime';
+    country = 'ES';
+   lang = 'es';
+
+  const data = await fetchData(query, limit, timePublished, country, lang);
+  console.log(data);
+
+  const articles = data.data || []; // Ajusta según la estructura de la respuesta
+
+  return (
+    <div className='contPrincipal'>
+      <h1>Sports News</h1>
+      <div className='news'>
+        {articles.length > 0 ? (
+          articles.map((article, index) => (
+            <div key={index} className='article'>
+              <h2>{article.title}</h2>
+              <img src={article.photo_url} alt={article.title} />
+              <p>{article.snippet}</p>
+              <a href={article.link} target='_blank' rel='noopener noreferrer'>Read more</a>
             </div>
-        </section>
+          ))
+        ) : (
+          <p>No articles found</p>
+        )}
+      </div>
     </div>
-    );
+  );
 }
