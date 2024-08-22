@@ -22,7 +22,11 @@
     --radius: 0.5rem;
   }
 
+<<<<<<< HEAD
 .portada {
+=======
+  .portada {
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.asmedia.epimg.net/resizer/v2/CMHGWCSW5WCHWPQ6XJA5EQLTQ4.jpg?auth=8539a330d292b557a79f50b8dce95fe6346db2dd205d6369b53545bc9115347f&width=1472&height=828&smart=true');
     background-size: cover;
     background-position: center;
@@ -53,11 +57,14 @@
 img{
     object-fit: cover;
 }
+<<<<<<< HEAD
 html, body {
     height: 100vw;
     margin: 0;
     padding: 0;
 }
+=======
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
 body{
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
@@ -92,6 +99,7 @@ body{
 }
 .contPrincipal{
     margin-top: 80px;
+<<<<<<< HEAD
     width: 100% !important;
     height: 100% !important;
     background-color: hsl(var(--background));
@@ -101,10 +109,17 @@ body{
 nav a{
     color: hsl(var(--primary-foreground));
     transition: all 0.5s ease-in-out ;
+=======
+}
+nav a{
+    color: hsl(var(--primary-foreground));
+    transition: all 0.5s;
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
 }
 nav a:hover{
     color: hsl(var(--foreground));
     border-bottom: 2px solid hsl(var(--primary-foreground));
+<<<<<<< HEAD
 }
 select,option{
     border: 2px solid hsl(var(--border));
@@ -126,4 +141,6 @@ select,option{
     height: 200px;
     object-fit: cover;
     border-radius: var(--radius);
+=======
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
 }

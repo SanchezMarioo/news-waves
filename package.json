@@ -10,8 +10,15 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+<<<<<<< HEAD
     "next": "14.2.6",
     "react": "^18",
+=======
+    "next": "^14.2.5",
+    "node-fetch": "^3.3.2",
+    "react": "^18",
+    "react-bootstrap": "^2.10.4",
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
     "react-dom": "^18"
   }
 }

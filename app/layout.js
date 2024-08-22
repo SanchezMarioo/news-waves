@@ -1,7 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Bootstrap from "./bootstrap"; // Importar el componente Bootstrap
+<<<<<<< HEAD
 import Link from "next/link";
+=======
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +20,17 @@ export default function RootLayout({ children }) {
         <Bootstrap /> {/* Usar el componente Bootstrap */}
         <nav className="navbar navbar-expand-lg fixed-top">
     <div className="container-fluid">
+<<<<<<< HEAD
       <Link className="navbar-brand" href="#">
       <svg data-id="1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 m-2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg>
         News Wave App
       </Link>
+=======
+      <a className="navbar-brand" href="#">
+      <svg data-id="1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 m-2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg>
+        News Wave App
+      </a>
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
       <button
         className="navbar-toggler"
         type="button"
@@ -35,6 +45,7 @@ export default function RootLayout({ children }) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
+<<<<<<< HEAD
             <Link className="nav-link active" aria-current="page" href="/">
               Incio
             </Link>
@@ -50,6 +61,34 @@ export default function RootLayout({ children }) {
             </Link>
           </li>
         </ul>
+=======
+            <a className="nav-link active" aria-current="page" href="#">
+              Incio
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" aria-current="page" href="#">
+              Noticias
+            </a>
+          </li>
+          <li className="nav-item">
+          <a className="nav-link" aria-current="page" href="#">
+              Sobre Nosotros
+            </a>
+          </li>
+        </ul>
+        <form className="d-flex" role="search">
+          <input
+            className="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button className="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
       </div>
     </div>
   </nav>

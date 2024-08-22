@@ -1,6 +1,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+<<<<<<< HEAD
 import Link from "next/link";
+=======
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
 
 async function getNews(categoria) {
   const res = await fetch(process.env.DB_HOST + '/posts?category=' + categoria, { next: { revalidate: 10 }});
@@ -44,7 +47,11 @@ export default async function Home() {
                         <div className="content p-2">
                           <h5>{post.title}</h5>
                           <p>{post.snippet}</p>
+<<<<<<< HEAD
                           <Link href={post.link} className="btn btn-light m-2" role="button" data-bs-toggle="button">Leer Mas</Link>
+=======
+                          <a href={post.link} className="btn btn-light m-2" role="button" data-bs-toggle="button">Leer Mas</a>
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
                         </div>
                       </div>
                     </div>
@@ -64,7 +71,11 @@ export default async function Home() {
                       <div className="content p-2">
                         <h5>{post.title}</h5>
                         <p>{post.snippet}</p>
+<<<<<<< HEAD
                         <Link href={post.link} className="btn btn-light m-2" role="button" data-bs-toggle="button">Leer Mas</Link>
+=======
+                        <a href={post.link} className="btn btn-light m-2" role="button" data-bs-toggle="button">Leer Mas</a>
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
                       </div>
                     </div>
                   </div>
@@ -83,7 +94,11 @@ export default async function Home() {
                   <div className="content p-2">
                     <h5>{post.title}</h5>
                     <p>{post.snippet}</p>
+<<<<<<< HEAD
                     <Link href={post.link} className="btn btn-light m-2" role="button" data-bs-toggle="button">Leer Mas</Link>
+=======
+                    <a href={post.link} className="btn btn-light m-2" role="button" data-bs-toggle="button">Leer Mas</a>
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
                   </div>
                 </div>
               </div>
@@ -102,7 +117,11 @@ export default async function Home() {
               <div className="card-body">
                 <h3 className="card-title">{post.title}</h3>
                 <p className="card-text">{post.snippet}</p>
+<<<<<<< HEAD
                 <Link href={post.link} className="btn btn-light">Leer Más</Link>
+=======
+                <a href={post.link} className="btn btn-light">Leer Más</a>
+>>>>>>> ea4c35d5ec25b8115781bac6180ad6c069051f0f
               </div>
             </div>
           </div>
